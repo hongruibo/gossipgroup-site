@@ -24,7 +24,7 @@
     .btn:hover{transform:translateY(-2px);box-shadow:var(--shadow);border-color:rgba(255,255,255,.28)}
     .btn.primary{background:linear-gradient(135deg,#ffffff,#e8e1da);color:#2a0a00;border-color:transparent}
     .btn.secondary{color:var(--text)}
-    .arrow{font-family:ui-sans-serif,system-ui;opacity:.8;transform:translateY(1px)}
+    .arrow{opacity:.8;transform:translateY(1px)}
     section{padding:72px 0;border-top:1px solid var(--stroke)}
     .lead{max-width:900px;margin:0 auto;font-size:18px;line-height:1.7;color:var(--muted);text-align:center}
     .luma-wrap{margin:40px auto 0;max-width:720px;border-radius:12px;overflow:hidden;border:1px solid var(--stroke)}
@@ -34,7 +34,7 @@
     .card{background:var(--glass);border:1px solid var(--stroke);border-radius:16px;padding:16px;display:flex;align-items:center;gap:14px;transition:transform .18s,box-shadow .18s,border-color .18s}
     .card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:rgba(255,255,255,.22)}
     .avatar{width:64px;height:64px;border-radius:12px;overflow:hidden;flex-shrink:0;box-shadow:inset 0 0 0 1px rgba(255,255,255,.06)}
-    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:1/1}
     .name{font-weight:700;font-size:18px;margin-bottom:2px}
     .role{color:var(--muted);font-size:14px}
     footer{padding:40px 0;text-align:center;opacity:.8;font-size:13px;border-top:1px solid var(--stroke)}
@@ -44,13 +44,14 @@
   <header class="hero grid-bg">
     <div class="container inner">
       <h1 class="title">Gossip Group</h1>
-      <p class="subtitle">Backing companies that will be the hottest gossip of tomorrow. For trusted ears only...</p>
+      <p class="subtitle">Backing companies that will be the hottest gossip of tomorrow. </p> </p>For trusted ears only...</p>
       <div class="btns">
         <a class="btn primary" href=" https://tally.so/r/wdOa0N" target="_blank" rel="noopener">Be the Gossip <span class="arrow">→</span></a>
         <a class="btn secondary" href="https://tally.so/r/3yB2Mp" target="_blank" rel="noopener">Be a Gossiper <span class="arrow">→</span></a>
       </div>
     </div>
   </header>
+
   <section id="about">
     <div class="container">
       <h2 class="section-title" style="text-align:center; margin-bottom:10px;">Community </h2>
@@ -60,19 +61,31 @@
       </div>
     </div>
   </section>
+
   <section id="team">
     <div class="container">
       <h2 class="section-title" style="text-align:center; margin-bottom:18px;">Founding Partners</h2>
       <div class="grid cols-2">
         <div class="card">
-          <div class="avatar"><img src="https://unavatar.io/linkedin/in/lindahongcheng" alt="Linda Hong Cheng" loading="lazy"></div>
+          <div class="avatar">
+            <img
+              src="https://ui-avatars.com/api/?name=Linda+Hong+Cheng&background=4d0f00&color=ffffff&bold=true"
+              data-unavatar="https://unavatar.io/https://www.linkedin.com/in/lindahongcheng"
+              alt="Linda Hong Cheng" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+          </div>
           <div>
             <div class="name"><a href="https://www.linkedin.com/in/lindahongcheng/" target="_blank" rel="noopener">Linda Hong Cheng</a></div>
             <div class="role">Vision & Strategy</div>
           </div>
         </div>
+
         <div class="card">
-          <div class="avatar"><img src="https://unavatar.io/linkedin/in/louise-scarlette-maunoir" alt="Louise Scarlette Maunoir" loading="lazy"></div>
+          <div class="avatar">
+            <img
+              src="https://ui-avatars.com/api/?name=Louise+Scarlette+Maunoir&background=4d0f00&color=ffffff&bold=true"
+              data-unavatar="https://unavatar.io/https://www.linkedin.com/in/louise-scarlette-maunoir"
+              alt="Louise Scarlette Maunoir" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+          </div>
           <div>
             <div class="name"><a href="https://www.linkedin.com/in/louise-scarlette-maunoir/" target="_blank" rel="noopener">Louise Scarlette Maunoir</a></div>
             <div class="role">Ecosystem & Ops</div>
@@ -81,6 +94,7 @@
       </div>
     </div>
   </section>
+
   <section id="thesis">
     <div class="container" style="text-align:center;">
       <h2 class="section-title" style="margin-bottom:18px;">Thesis</h2>
@@ -99,7 +113,23 @@
       </div>
     </div>
   </section>
+
   <footer>© <span id="year"></span> Gossip Group </footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    (function () {
+      var els = document.querySelectorAll('img[data-unavatar]');
+      els.forEach(function (el) {
+        var url = el.getAttribute('data-unavatar');
+        if (!url) return;
+        var img = new Image();
+        img.onload = function () { el.src = url + (url.indexOf('?')>-1 ? '&' : '?') + 't=' + Date.now(); };
+        img.onerror = function () { /* keep fallback */ };
+        img.referrerPolicy = 'no-referrer';
+        img.src = url;
+      });
+    })();
+  </script>
 </body>
 </html>
