@@ -18,7 +18,13 @@
     .hero{min-height:65vh;display:flex;align-items:center;text-align:center;padding:56px 20px;position:relative;overflow:hidden}
     .hero .inner{width:100%}
     .title{font-size:clamp(44px,7vw,96px);font-weight:700}
-    .subtitle{margin:10px auto 26px;color:var(--muted);font-size:clamp(18px,2.2vw,22px);max-width:780px}
+    .subtitle{
+      margin:16px auto 32px;
+      color:var(--muted);
+      font-size:clamp(18px,2.2vw,22px);
+      max-width:780px;
+      line-height:1.6;
+    }
     .btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
     .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 22px;border-radius:999px;font-weight:600;letter-spacing:.2px;border:1px solid var(--stroke);background:var(--glass);transition:transform .18s,box-shadow .18s,background .18s,border-color .18s}
     .btn:hover{transform:translateY(-2px);box-shadow:var(--shadow);border-color:rgba(255,255,255,.28)}
@@ -44,9 +50,12 @@
   <header class="hero grid-bg">
     <div class="container inner">
       <h1 class="title">Gossip Group</h1>
-      <p class="subtitle">Backing companies that will be the hottest gossip of tomorrow. </p> </p>For trusted ears only...</p>
+      <p class="subtitle">
+        Backing companies that will be the hottest gossip of tomorrow.<br>
+        For trusted ears only...
+      </p>
       <div class="btns">
-        <a class="btn primary" href=" https://tally.so/r/wdOa0N" target="_blank" rel="noopener">Be the Gossip <span class="arrow">→</span></a>
+        <a class="btn primary" href="https://tally.so/r/wdOa0N" target="_blank" rel="noopener">Be the Gossip <span class="arrow">→</span></a>
         <a class="btn secondary" href="https://tally.so/r/3yB2Mp" target="_blank" rel="noopener">Be a Gossiper <span class="arrow">→</span></a>
       </div>
     </div>
