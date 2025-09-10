@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gossip Group</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#390800;--text:#f7f7f5;--muted:#d8cfc8;--stroke:rgba(255,255,255,.14);--glass:rgba(255,255,255,.06);--shadow:0 10px 24px rgba(0,0,0,.35)}
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+    h1,h2,h3{font-family:"Playfair Display",serif;letter-spacing:.2px;margin:0}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    .grid-bg{background:radial-gradient(circle at 30% 30%, #4d0f00, #390800 70%) no-repeat}
+    .grid-bg::after{content:"";position:absolute;inset:0;background-image:url("https://www.transparenttextures.com/patterns/asfalt-dark.png");opacity:.12;pointer-events:none;mix-blend-mode:overlay;animation:velvetSheen 30s linear infinite}
+    @keyframes velvetSheen{0%{background-position:0 0}100%{background-position:200% 200%}}
+    .hero{min-height:65vh;display:flex;align-items:center;text-align:center;padding:56px 20px;position:relative;overflow:hidden}
+    .hero .inner{width:100%}
+    .title{font-size:clamp(44px,7vw,96px);font-weight:700}
+    .subtitle{margin:10px auto 26px;color:var(--muted);font-size:clamp(18px,2.2vw,22px);max-width:780px}
+    .btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 22px;border-radius:999px;font-weight:600;letter-spacing:.2px;border:1px solid var(--stroke);background:var(--glass);transition:transform .18s,box-shadow .18s,background .18s,border-color .18s}
+    .btn:hover{transform:translateY(-2px);box-shadow:var(--shadow);border-color:rgba(255,255,255,.28)}
+    .btn.primary{background:linear-gradient(135deg,#ffffff,#e8e1da);color:#2a0a00;border-color:transparent}
+    .btn.secondary{color:var(--text)}
+    .arrow{font-family:ui-sans-serif,system-ui;opacity:.8;transform:translateY(1px)}
+    section{padding:72px 0;border-top:1px solid var(--stroke)}
+    .lead{max-width:900px;margin:0 auto;font-size:18px;line-height:1.7;color:var(--muted);text-align:center}
+    .luma-wrap{margin:40px auto 0;max-width:720px;border-radius:12px;overflow:hidden;border:1px solid var(--stroke)}
+    .luma-wrap iframe{width:100%;height:500px;border:none;display:block}
+    .grid{display:grid;gap:22px}
+    @media (min-width:760px){.grid.cols-2{grid-template-columns:repeat(2,1fr)}}
+    .card{background:var(--glass);border:1px solid var(--stroke);border-radius:16px;padding:16px;display:flex;align-items:center;gap:14px;transition:transform .18s,box-shadow .18s,border-color .18s}
+    .card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:rgba(255,255,255,.22)}
+    .avatar{width:64px;height:64px;border-radius:12px;overflow:hidden;flex-shrink:0;box-shadow:inset 0 0 0 1px rgba(255,255,255,.06)}
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+    .name{font-weight:700;font-size:18px;margin-bottom:2px}
+    .role{color:var(--muted);font-size:14px}
+    footer{padding:40px 0;text-align:center;opacity:.8;font-size:13px;border-top:1px solid var(--stroke)}
+  </style>
+</head>
+<body>
+  <header class="hero grid-bg">
+    <div class="container inner">
+      <h1 class="title">Gossip Group</h1>
+      <p class="subtitle">Backing companies that will be the hottest gossip of tomorrow. For trusted ears only...</p>
+      <div class="btns">
+        <a class="btn primary" href=" https://tally.so/r/wdOa0N" target="_blank" rel="noopener">Be the Gossip <span class="arrow">→</span></a>
+        <a class="btn secondary" href="https://tally.so/r/3yB2Mp" target="_blank" rel="noopener">Be a Gossiper <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </header>
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title" style="text-align:center; margin-bottom:10px;">Community </h2>
+      <p class="lead">Curating intimate rooms for meaningful connections - cultivating generation-defining deals, conversations, and friendships</p>
+      <div class="luma-wrap">
+        <iframe src="https://lu.ma/embed/calendar/cal-uT8C0Y2HQBvnhut/events?lt=dark" loading="lazy" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      </div>
+    </div>
+  </section>
+  <section id="team">
+    <div class="container">
+      <h2 class="section-title" style="text-align:center; margin-bottom:18px;">Founding Partners</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <div class="avatar"><img src="/1707514699867.jpg" alt="Linda Hong Cheng" loading="lazy"></div>
+          <div>
+            <div class="name"><a href="https://www.linkedin.com/in/lindahongcheng/" target="_blank" rel="noopener">Linda Hong Cheng</a></div>
+            <div class="role">Vision & Strategy</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="avatar"><img src="/1743672427395.jpg" alt="Louise Scarlette Maunoir" loading="lazy"></div>
+          <div>
+            <div class="name"><a href="https://www.linkedin.com/in/louise-scarlette-maunoir/" target="_blank" rel="noopener">Louise Scarlette Maunoir</a></div>
+            <div class="role">Ecosystem & Ops</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="thesis">
+    <div class="container" style="text-align:center;">
+      <h2 class="section-title" style="margin-bottom:18px;">Thesis</h2>
+      <p class="lead" style="margin-bottom:28px;"><em>From whispered ideas to world-changing ventures.</em></p>
+      <div style="max-width:820px; margin:0 auto; font-size:17px; line-height:1.75; color:var(--muted); text-align:center;">
+        <p>Historically, “gossip” didn’t mean rumor.<br>It meant a sacred circle of women and allies - godparents, kin, caretakers - gathering through birth, grief, celebration, survival.</p>
+        <p>Over time, patriarchy twisted it into something frivolous.</p>
+        <p><strong>We’re reclaiming the word.</strong></p>
+        <p>Gossip Group is an invite-only global network of visionary investors, founders, and operators backing the hottest gossip of tomorrow - groundbreaking companies making the future healthier, happier, and more human (H³).</p>
+        <p><strong>Our thesis is simple:</strong> capital should serve community.</p>
+        <p>And the future of investing?<br>It doesn’t look like Wall Street.<br>It looks like a roundtable — with sharp minds, open hearts, and deep conviction.</p>
+        <p>We don’t just run investment meetings.<br>We design community experiences.</p>
+        <p><strong>Trust before transactions.<br>Imagination meets capital.</strong></p>
+        <p><em>Hot gossip for trusted ears only…</em></p>
+        <p style="font-weight:600; font-size:18px;">Smart money. Sharp minds. Great gossip.</p>
+      </div>
+    </div>
+  </section>
+  <footer>© <span id="year"></span> Gossip Group </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
